@@ -24,7 +24,6 @@
 		<link href='resources/css/font-awesome.css' rel='stylesheet'>
 		<link href='resources/css/custome.css' rel='stylesheet'>
 		<link href='resources/css/my_style.css' rel='stylesheet'>
-
 		
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="resources/img/favicon/apple-touch-icon.png">
@@ -34,6 +33,7 @@
 		<link rel="mask-icon" href="/resources/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
 		<link rel="stylesheet" href="css/font-awesome.css">
  
+		
+		
 	</head>
-
-<body>
+	<body>

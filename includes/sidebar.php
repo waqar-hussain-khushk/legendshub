@@ -1,231 +1,96 @@
-<?php
-
-$aPCat = array();
-
-$aCat  = array();
-
-
-
-/// Products Categories Code Starts ///
-
-if(isset($_REQUEST['p_cat'])&&is_array($_REQUEST['p_cat'])){
-
-foreach($_REQUEST['p_cat'] as $sKey=>$sVal){
-
-if((int)$sVal!=0){
-
-$aPCat[(int)$sVal] = (int)$sVal;
-
-}
-
-}
-
-}
-
-/// Products Categories Code Ends ///
-
-/// Categories Code Starts ///
-
-if(isset($_REQUEST['cat'])&&is_array($_REQUEST['cat'])){
-
-foreach($_REQUEST['cat'] as $sKey=>$sVal){
-
-if((int)$sVal!=0){
-
-$aCat[(int)$sVal] = (int)$sVal;
-
-}
-
-}
-
-}
-
-/// Categories Code Ends ///
-
-
-?>
-
-
-<div class="panel panel-default sidebar-menu"><!--- panel panel-default sidebar-menu Starts -->
+<div class="panel panel-default sidebar-menu"><!-- panel panel-default sidebar-menu Starts -->
 
 <div class="panel-heading"><!-- panel-heading Starts -->
 
-<h3 class="panel-title"><!-- panel-title Starts -->
-
-Products Categories
-
-<div class="pull-right"><!-- pull-right Starts -->
-
-<a href="#" style="color:black;">
-
-<span class="nav-toggle hide-show">
-
-Hide
-
-</span>
-
-</a>
-
-</div><!-- pull-right Ends -->
-
-</h3><!-- panel-title Ends -->
-
-</div><!-- panel-heading Ends -->
-
-<div class="panel-collapse collapse-data"><!-- panel-collapse collapse-data Starts -->
-
-<div class="panel-body"><!-- panel-body Starts -->
-
-
-</div><!-- panel-body Ends -->
-
-<div class="panel-body scroll-menu"><!-- panel-body scroll-menu Starts -->
-
-<ul class="nav nav-pills nav-stacked category-menu" id="dev-p-cats"><!-- nav nav-pills nav-stacked category-menu Starts -->
-
 <?php
 
-$get_p_cats = "select * from product_categories";
+$customer_session = $_SESSION['customer_email'];
 
-$run_p_cats = mysqli_query($con,$get_p_cats);
+$get_customer = "select * from customers where customer_email='$customer_session'";
 
-while($row_p_cats = mysqli_fetch_array($run_p_cats)){
+$run_customer = mysqli_query($con,$get_customer);
 
-$p_cat_id = $row_p_cats['p_cat_id'];
+$row_customer = mysqli_fetch_array($run_customer);
 
-$p_cat_title = $row_p_cats['p_cat_title'];
+$customer_image = $row_customer['customer_image'];
 
+$customer_name = $row_customer['customer_name'];
 
-echo "
-
-<li class='checkbox checkbox-primary' style='background:#dddddd;' >
-
-<a>
-
-<label>
-
-<input ";
-
-if(isset($aPCat[$p_cat_id])){ echo "checked='checked'"; }
-
-echo " type='checkbox' value='$p_cat_id' name='p_cat' class='get_p_cat' id='p_cat' >
-
-<span>
-
-$p_cat_title
-
-</span>
-
-</label>
-
-</a>
-
-</li>
-
-";
+if(!isset($_SESSION['customer_email'])){
 
 
 }
-
-?>
-
-</ul><!-- nav nav-pills nav-stacked category-menu Ends -->
-
-</div><!-- panel-body scroll-menu Ends -->
-
-</div><!-- panel-collapse collapse-data Ends -->
-
-</div><!--- panel panel-default sidebar-menu Ends -->
-
-
-
-<div class="panel panel-default sidebar-menu"><!--- panel panel-default sidebar-menu Starts -->
-
-<div class="panel-heading"><!-- panel-heading Starts -->
-
-<h3 class="panel-title"><!-- panel-title Starts -->
-
-Categories
-
-<div class="pull-right"><!-- pull-right Starts -->
-
-<a href="#" style="color:black;">
-
-<span class="nav-toggle hide-show">
-
-Hide
-
-</span>
-
-</a>
-
-</div><!-- pull-right Ends -->
-
-
-</h3><!-- panel-title Ends -->
-
-</div><!-- panel-heading Ends -->
-
-<div class="panel-collapse collapse-data"><!-- panel-collapse collapse-data Starts -->
-
-<div class="panel-body"><!-- panel-body Starts -->
-
-
-</div><!-- panel-body Ends -->
-
-<div class="panel-body scroll-menu"><!-- panel-body scroll-menu Starts -->
-
-<ul class="nav nav-pills nav-stacked category-menu" id="dev-cats"><!-- nav nav-pills nav-stacked category-menu Starts -->
-
-<?php
-
-$get_cat = "select * from categories";
-
-$run_cat = mysqli_query($con,$get_cat);
-
-while($row_cat = mysqli_fetch_array($run_cat)){
-
-$cat_id = $row_cat['cat_id'];
-
-$cat_title = $row_cat['cat_title'];
-
+else {
 
 echo "
 
-<li class='checkbox checkbox-primary' style='background:#dddddd;'>
+<center>
 
-<a>
+<img src='customer_images/$customer_image' class='img-responsive'>
 
-<label>
+</center>
 
-<input ";
+<br>
 
-if(isset($aCat[$cat_id])){ echo "checked='checked'"; }
-
-echo " type='checkbox' value='$cat_id' name='cat' class='get_cat' id='cat'> 
-
-<span>
-
-$cat_title
-</span>
-
-</label>
-
-</a>
-
-</li>
+<h3 align='center' class='panel-title'> Name : $customer_name </h3>
 
 ";
 
 }
 
-
 ?>
 
-</ul><!-- nav nav-pills nav-stacked category-menu Ends -->
+</div><!-- panel-heading Ends -->
 
-</div><!-- panel-body scroll-menu Ends -->
+<div class="panel-body"><!-- panel-body Starts -->
 
-</div><!-- panel-collapse collapse-data Ends -->
+<ul class="nav nav-pills nav-stacked"><!-- nav nav-pills nav-stacked Starts -->
 
-</div><!--- panel panel-default sidebar-menu Ends -->
+<li class="<?php if(isset($_GET['my_orders'])){ echo "active"; } ?>">
+
+<a href="my_account.php?my_orders"> <i class="fa fa-list"> </i> My Orders </a>
+
+</li>
+
+<li class="<?php if(isset($_GET['pay_offline'])){ echo "active"; } ?>">
+
+<a href="my_account.php?pay_offline"> <i class="fa fa-bolt"></i> Pay Offline </a>
+
+</li>
+
+<li class="<?php if(isset($_GET['edit_account'])){ echo "active"; } ?>">
+
+<a href="my_account.php?edit_account"> <i class="fa fa-pencil"></i> Edit Account </a>
+
+</li>
+
+<li class="<?php if(isset($_GET['change_pass'])){ echo "active"; } ?>">
+
+<a href="my_account.php?change_pass"> <i class="fa fa-user"></i> Change Password </a>
+
+</li>
+
+<li class="<?php if(isset($_GET['my_wishlist'])){ echo "active"; } ?>">
+
+<a href="my_account.php?my_wishlist"> <i class="fa fa-heart"></i> My WishList </a>
+
+</li>
+
+<li class="<?php if(isset($_GET['delete_account'])){ echo "active"; } ?>">
+
+<a href="my_account.php?delete_account"> <i class="fa fa-trash-o"></i> Delete Account </a>
+
+</li>
+
+<li>
+
+<a href="logout.php"> <i class="fa fa-sign-out"></i> Logout </a>
+
+</li>
+
+
+</ul><!-- nav nav-pills nav-stacked Ends -->
+
+</div><!-- panel-body Ends -->
+
+</div><!-- panel panel-default sidebar-menu Ends -->

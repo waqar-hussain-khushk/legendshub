@@ -50,11 +50,6 @@ body {
   padding: 0;
 }
 
-
-:root {
-  --primary: #facc04 !important;
-}
-
 /* MODULES - Individual site components */
 ul {
   padding: 0;
@@ -239,7 +234,7 @@ img {
   display: inline;
   float: left;
   width: 100%;
-  background-color: var(--primary) !important;
+  background-color: #facc04;
   margin-bottom: -10px;
 }
 #aa-header .aa-header-top .aa-header-top-area {
@@ -340,7 +335,7 @@ img {
 	margin-top: 7px;
 	float: right;
 	text-decoration: none;
-	color: var(--primary) !important;
+	color: #facc04;
 }
 
 #aa-header .aa-header-bottom .aa-header-bottom-area .aa-search-box {
@@ -351,7 +346,7 @@ img {
     width: 860px;
 }
 #aa-header .aa-header-bottom .aa-header-bottom-area .aa-search-box input[type="text"] {
-    border: 1px solid var(--primary) !important;
+    border: 1px solid #facc04;
     color: #000;
     font-size: 14px;
     font-family: "Raleway", sans-serif;
@@ -373,7 +368,7 @@ img {
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
-  background-color: var(--primary) !important;
+  background-color: #facc04;
   margin: 50px 0px 50px 0px;
 }
 #aa-header .aa-header-bottom .aa-header-bottom-area .aa-search-box .form-control {
@@ -414,7 +409,7 @@ img {
   margin-top: 18px;
   height: auto;
   display: block;
-  color: var(--primary) !important;
+  color: #facc04;
  
 }
 #aa-header .aa-header-bottom .aa-cartbox .aa-cart-link .fa-shopping-basket {
@@ -422,7 +417,7 @@ img {
   position: relative;
 }
 #aa-header .aa-header-bottom .aa-cartbox .aa-cart-link .aa-cart-title {
-  color: var(--primary) !important;
+  color: #facc04;
   display: block;
   font-size: 14px;
 }
@@ -586,7 +581,7 @@ img {
   display: inline;
   float: left;
   width: 100%;
-  background-color: var(--primary) !important;
+  background-color: #facc04;
 }
 #menu .menu-area {
   float: left;
@@ -623,7 +618,7 @@ img {
   transition: all 0.5s;
 }
 #menu .menu-area .navbar-default .navbar-nav li a:hover{
-  color: var(--primary) !important;
+  color: #facc04;
   background-color: #000;
   padding: 10px;
   -webkit-transition: all 0.5s;
@@ -673,7 +668,7 @@ img {
 }
 #aa-slider .aa-slider-area .seq-title span {
   background-color: #000;  
-  color: var(--primary);
+  color: #facc04;
   display: inline-block;
   padding: 6px 15px;
   text-transform: uppercase;
@@ -702,10 +697,10 @@ img {
 #aa-slider .aa-slider-area .seq-title .aa-shop-now-btn {
   margin-top: 25px;
   color: #000;
-  background-color: var(--primary) !important;
+  background-color: #facc04;
 }
 #aa-slider .aa-slider-area .seq-title .aa-shop-now-btn:hover{
-  color: var(--primary) !important;
+  color: #facc04;
   background-color: #000;
 }
 #aa-slider .aa-slider-area .seq .seq-next {
@@ -838,7 +833,7 @@ img {
 }
 #aa-promo .aa-promo-area .aa-promo-banner .aa-prom-content span {
   background-color: #000;
-  color: var(--primary) !important;
+  color: #facc04;
   padding: 5px 10px;  
 }
 #aa-promo .aa-promo-area .aa-promo-banner .aa-prom-content h4 {
@@ -1005,7 +1000,7 @@ img {
 .aa-product-catg li figure .aa-add-card-btn {
   background: #000 none repeat scroll 0 0;
   bottom: 0;
-  color: var(--primary) !important;
+  color: #facc04;
   font-size: 16px;
   font-weight: bold;
   left: 0;
@@ -1271,10 +1266,10 @@ img {
 }
 #aa-support .aa-support-area .aa-support-single span {
   font-size: 30px;
-  color: var(--primary) !important;
+  color: #facc04;
 }
 #aa-support .aa-support-area .aa-support-single h4 {
-  color: var(--primary) !important;
+  color: #facc04;
   font-family: "Lato", sans-serif;
   font-weight: bold;
   letter-spacing: 0.5px;
@@ -1332,40 +1327,7 @@ img {
 #aa-client-brand .aa-client-brand-area .slick-dots {
   display: none!important;
 }
-.aa-subscribe-form{
-  width: 100% !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center;
-  justify-content: center;
 
-}
-.sub-form{
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30vw;
-  margin: auto !important;
-}
-.sub-form input{
-  height: 6vh !important;
-  box-shadow: none !important;
-  outline: none !important;
-  
-}
-.sub-form button{
-  height: 5.5vh !important;
-  background-color: var(--primary) !important;
-  outline: none !important;
-  color: #000;
-
-}
-
-#input{
-  width: 28vw !important;
-  background-color: red !important;
-}
 #aa-subscribe {
   display: inline;
   float: left;
@@ -1406,7 +1368,7 @@ img {
 #aa-subscribe .aa-subscribe-area .aa-subscribe-form input[type="submit"] {
   color: #000;
   font-size: 15px;
-  background-color: var(--primary) !important;
+  background-color: #facc04;
   font-weight: bold;
   border: 1px solid #000;
   height: 40px;
@@ -1418,7 +1380,7 @@ img {
   width: 120px;
 }
 #aa-subscribe .aa-subscribe-area .aa-subscribe-form input[type="submit"]:hover{
-  color: var(--primary) !important;
+  color: #facc04;
   background-color: #000;
   border: 1px solid #000;
 }
@@ -2525,7 +2487,7 @@ img {
   display: block;
 }
 #aa-footer .aa-footer-top .aa-footer-top-area .aa-footer-widget h3 {
-  color: var(--primary) !important;
+  color: #facc04;
   font-size: 18px;
   font-family: ethnocentric;
   letter-spacing: 2px;
@@ -2543,7 +2505,7 @@ img {
 }
 #aa-footer .aa-footer-top .aa-footer-top-area .aa-footer-widget .aa-footer-nav li a:hover, #aa-footer .aa-footer-top .aa-footer-top-area .aa-footer-widget .aa-footer-nav li a:focus {
   color: #000;
-  background-color: var(--primary) !important;
+  background-color: #facc04;
   padding: 10px;
   font-weight: bold;
   list-style: none;
@@ -2573,7 +2535,7 @@ img {
 #aa-footer .aa-footer-top .aa-footer-top-area .aa-footer-widget .aa-footer-social a:hover {
   color: #000;
   border-color: #000;
-  background-color: var(--primary) !important;
+  background-color: #facc04;
   padding: 5px;
 }
 #aa-footer .aa-footer-bottom {
@@ -2582,7 +2544,7 @@ img {
   float: left;
   padding: 15px 0;
   width: 100%;
-  background: var(--primary) !important;
+  background: #facc04;
 }
 #aa-footer .aa-footer-bottom .aa-footer-bottom-area {
   display: inline;
@@ -2779,9 +2741,6 @@ img {
   .navbar-default .navbar-toggle,
   .navbar-default .navbar-toggle {
     border-radius: 0;
-  }
-  .sub-form{
-    width: 80% !important;
   }
 
   .navbar-default .navbar-toggle:hover,

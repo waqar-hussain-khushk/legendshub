@@ -23,9 +23,9 @@
               <!-- / header top left -->
               <div class="aa-header-top-right">
                 <ul class="aa-head-top-nav-right">
-                  <li class="hidden-xs"><a href="help.php">Help</a></li>
+                  <li class="hidden-xs"><a href="../help.php">Help</a></li>
                   <li class="hidden-xs"><a href="return&exchange_policy.php">Return & Exchange</a></li>
-                  <li class="hidden-xs"><a href="customer/my_account.php?my_orders">
+                  <li class="hidden-xs"><a href="my_account.php?my_orders">
                 <?php
                 if(!isset($_SESSION['customer_email'])){
                     echo "Welcome :Guest"; 
@@ -53,12 +53,12 @@
               <!-- logo  -->
               <div class="aa-logo">
                 <!-- img based logo -->
-                 <a href="index.php"><img src="resources/img/logo.png" alt="logo img"></a>
+                 <a href="../index.php"><img src="resources/img/logo.png" alt="logo img"></a>
 				</div>
 				<!-- / logo  -->
 				 <!-- myaccount -->
               <div class="aa-cartbox">
-                <a class="aa-cart-link" href="cart.php">
+                <a class="aa-cart-link" href="../cart.php">
                    <span><img src='resources/img/shopp.png'></span>
 				   <br>
                   <span style="font-weight: bold; letter-spacing:1px;" class="aa-cart-title">MY CART</span>
@@ -75,7 +75,7 @@
 						if(!isset($_SESSION['customer_email'])){
 							echo '<a style="color:#facc04; font-weight:bold;letter-spacing:1px;" href="customer_register.php">SIGN UP</a>';
 						}else{ 
-							echo '<a  href="customer/my_account.php?my_orders" style="color:#facc04;font-weight:bold;letter-spacing:1px;">My Account</a>';
+							echo '<a  href="my_account.php?my_orders" style="color:#facc04;font-weight:bold;letter-spacing:1px;">My Account</a>';
 						}?> 
                     </li>
                     <li style="float: left;	margin-top: 5px;">
@@ -116,14 +116,14 @@
           <div class="navbar-collapse collapse">
             <!-- Left nav -->
             <ul class="nav navbar-nav">           
-             <li><a href="index.php">Home</a></li> 
-			  <li><a href="women.php">Women</a></li>
-				<li><a href="kids.php">Kids</a></li> 
-				<li><a href="men.php">Men</a></li>
-				<li><a href="new_arrivals.php">New Arrivals</a></li>
-              <li><a href="special_deals.php">Special Deals</a></li>				
-             <li><a href="contact.php">Contact Us</a></li> 
-			<li><a href="#">About Us</a></li> 			 
+             <li><a href="../index.php">Home</a></li> 
+			  <li><a href="#">Women</a></li>
+				<li><a href="#">Kids</a></li> 
+				<li><a href="#">Men</a></li>
+				<li><a href="#">New Arrivals</a></li>
+              <li><a href="#">Special Deals</a></li>				
+             <li><a href="../contact.php">Contact Us</a></li> 
+			<li><a href="#">About Us</a></li>					
             </ul>
           </div><!--/.nav-collapse -->
         </div>

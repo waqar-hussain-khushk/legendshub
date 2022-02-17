@@ -1,7 +1,12 @@
+<style>
 
+	
+	
+}
+</style>
 <!-- start contact section -->
  <section id="aa-contact">
-   <div style="background: #fff;" class="container">
+   <div class="container">
      <div class="row">
        <div>
          <div class="aa-contact-area">
